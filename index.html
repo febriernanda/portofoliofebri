@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Febri Ernanda | Graphic Designer & Video Editor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#334155;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0f172a;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:white;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+.mobile-btn{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(
+rgba(15,23,42,.85),
+rgba(15,23,42,.85)
+),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero h3{
+font-weight:400;
+margin-bottom:25px;
+color:#38bdf8;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#38bdf8;
+color:#0f172a;
+font-weight:600;
+border-radius:50px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+color:#0f172a;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.about-content{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.about-content p{
+line-height:1.9;
+margin-bottom:25px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.skill{
+padding:10px 18px;
+background:#0f172a;
+color:white;
+border-radius:30px;
+font-size:14px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+color:#0f172a;
+}
+
+/* EXPERIENCE */
+
+.experience{
+display:grid;
+gap:25px;
+}
+
+.exp-box{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.exp-box h3{
+color:#0f172a;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.contact p{
+margin:15px 0;
+font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0f172a;
+padding:25px;
+text-align:center;
+color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.mobile-btn{
+display:block;
+}
+
+.menu{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:#0f172a;
+flex-direction:column;
+padding:25px;
+text-align:center;
+}
+
+.menu.active{
+display:flex;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+FEBRI ERNANDA
+</div>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="menu" id="menu">
+<a href="#home">Beranda</a>
+<a href="#about">Tentang</a>
+<a href="#portfolio">Portofolio</a>
+<a href="#experience">Pengalaman</a>
+<a href="#contact">Kontak</a>
+</div>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Febri Ernanda</h1>
+
+<h3>Graphic Designer & Photographer</h3>
+
+<p>
+Saya adalah seorang Graphic Designer dan Video Editor yang memiliki minat dalam bidang desain komunikasi visual, branding, editing video, dan pengembangan konten digital kreatif. Saya berkomitmen untuk menghasilkan karya visual yang menarik, profesional, dan mampu menyampaikan pesan secara efektif kepada audiens.
+</p>
+
+<a href="#portfolio" class="btn">
+Lihat Portofolio
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+Tentang Saya
+</h2>
+
+<div class="about">
+
+<img src="profil.jpeg" alt="Foto Profil">
+
+<div class="about-content">
+
+<p>
+Saya memiliki ketertarikan yang besar dalam dunia desain grafis dan produksi video. Berbekal kreativitas, ketelitian, dan semangat belajar yang tinggi, saya terus mengembangkan kemampuan dalam menciptakan desain visual, identitas merek, konten media sosial, serta video yang informatif dan menarik.
+</p>
+
+<div class="skills">
+
+<span class="skill">Graphic Design</span>
+<span class="skill">Adobe Photoshop</span>
+<span class="skill">Adobe Illustrator</span>
+<span class="skill">Adobe Premiere Pro</span>
+<span class="skill">Canva</span>
+<span class="skill">Brand Identity</span>
+<span class="skill">Social Media Design</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="section-title">
+Portofolio Karya
+</h2>
+
+<div class="portfolio-grid">
+
+<div class="card">
+<img src="NASKUNDUK2.png">
+<div class="card-content">
+<h3>Desain Poster</h3>
+<p>Perancangan media promosi visual untuk berbagai kebutuhan publikasi.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="SEMARI BAHARI.png">
+<div class="card-content">
+<h3>Brand Identity</h3>
+<p>Pembuatan logo dan identitas visual yang profesional.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="photography.jpeg">
+<div class="card-content">
+<h3>Photography</h3>
+<p>Mengambil dan mengedit foto untuk keperluan promosi, dokumentasi, dan konten digital.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="medsos.png">
+<div class="card-content">
+<h3>Konten Media Sosial</h3>
+<p>Desain konten kreatif untuk meningkatkan engagement audiens.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="section-title">
+Pengalaman & Kompetensi
+</h2>
+
+<div class="experience">
+
+<div class="exp-box">
+<h3>Graphic Design</h3>
+<p>Mengembangkan berbagai desain visual seperti poster, banner, logo, dan konten media sosial.</p>
+</div>
+
+<div class="exp-box">
+<h3>Video Production & Editing</h3>
+<p>Mengedit video promosi, dokumentasi, dan konten digital menggunakan software editing profesional.</p>
+</div>
+
+<div class="exp-box">
+<h3>Digital Content Creation</h3>
+<p>Menciptakan konten visual yang menarik dan sesuai dengan kebutuhan target audiens.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Kontak
+</h2>
+
+<div class="contact">
+
+<p><strong>Email:</strong> febriernanda@email.com</p>
+
+<p><strong>Instagram:</strong> @febriernanda</p>
+
+<p><strong>Alamat:</strong> Sambas, Kalimantan Barat</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Febri Ernanda | Graphic Designer & Video Editor
+</footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
+
+</body>
+</html>
